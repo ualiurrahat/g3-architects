@@ -3,14 +3,21 @@
 -------------  */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&family=Work+Sans:wght@400;500;700&display=swap');
 
-/* ----------------
-    Common Styles
--------------------*/
+
 /* universal selector  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* ----------------
+    Common Styles
+-------------------*/
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
 }
 
 .btn-primary {
@@ -27,29 +34,30 @@ header {
     background: rgba(255, 144, 14, 0.1);
 }
 
-
 /*---------------------------
     header section styles
 -----------------------------*/
 .navigation {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
 }
 
 .brand-name {
     font-weight: 700;
     font-size: 45px;
     color: #131313;
-    margin-top: 50px;
-    margin-left: 227px;
+    /* margin-top: 50px;
+    margin-left: 227px; */
     /* from figma  */
     /* text-align: center; */
 }
 
 .navbar ul {
     display: flex;
-    margin-top: 63px;
-    margin-right: 241px;
+    /* margin-top: 63px;
+    margin-right: 241px; */
     gap: 35px;
 }
 
@@ -68,30 +76,26 @@ header {
     /* text-align: center; */
 }
 
-.banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px 530px 30px 530px;
-}
-
 .banner-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    height: 50vh;
 }
 
 .banner-title {
     font-weight: 700;
     font-size: 64px;
-    /* margin: 205px 530px 20px 528px; */
     color: #131313;
 
 }
 
 .banner-description {
     color: #727272;
+    max-width: 860px;
+
     /* text-align: center; */
 }
 
@@ -100,17 +104,21 @@ header {
     margin-top: 33px;
 }
 
+.banner-image {
+    padding-bottom: 40px;
+}
+
 .banner-image img {
-    border-radius: 8px;
-    width: 1440px;
-    height: 700px;
-    margin: 50px 240px 45px 240px;
+    /* border-radius: 8px;
+    margin: 50px 240px 45px 240px; */
+    width: 100%;
 }
 
 /*------------------------
     team section styles
  -------------------------  */
 .team-container {
+    margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -123,17 +131,10 @@ header {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 24px;
     column-gap: 24px;
-    margin-left: 300px;
-}
 
-.team-image {
-    width: 342px;
-    height: 342px;
-    border-radius: 8px;
 }
-
-.team-info {
-    margin-right: 300px;
+.team-image img {
+    width: 100%;
 }
 
 .team-title {
@@ -170,15 +171,16 @@ header {
 /* feature-section styles */
 .feature-container {
     display: flex;
-    margin-left: 240px;
-    margin-top: 130px;
     gap: 54px;
-
-
+    margin-top: 100px;
 }
 
 .feature-info {
     width: 50%;
+}
+
+.feature-about-title-container {
+    border-left: 5px solid orange
 }
 
 .feature-about-title {
@@ -186,6 +188,7 @@ header {
     font-size: 45px;
     color: #131313;
     margin-bottom: 24px;
+    padding-left: 20px;
 }
 
 .feature-about-description {
@@ -194,13 +197,12 @@ header {
 }
 
 .features {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+    padding: 20px;
 }
 
 .feature {
-    padding: 30px 42px 0 30px;
+    padding: 20px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
 }
 
 .feature-title {
@@ -215,8 +217,11 @@ header {
 }
 
 .feature-image {
-    margin-right: 240px;
-    width: 50%
+    width: 50%;
+}
+
+.feature-image img {
+    width: 100%;
 }
 
 .btn-large {
@@ -235,11 +240,6 @@ header {
 /*--------------------------
     facts section styles
 ----------------------- */
-.fact-container {
-    margin-left: 240px;
-    margin-right: 240px;
-}
-
 .fact-about-title {
     font-weight: 700;
     font-size: 45px;
@@ -250,20 +250,32 @@ header {
 .fact-about-description {
     color: #727272;
     width: 50%;
+    margin-bottom: 100px;
 }
 
 .facts {
     display: flex;
-    gap: 125px;
-    margin-left: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .fact {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     border: 1px solid #FF900E;
     border-radius: 8px;
-    padding: 45px 36px 60px 35px;
+    /* padding: 45px 36px 60px 35px; */
     text-align: center;
+    transition: width 3s ease-in 2s, height 3s linear 2s, transform 2s;
+    padding: 30px 40px;
+    margin-top: 10px;
+
+}
+
+/* transition and animation effect  */
+.fact:hover {
+    background-color: lightblue;
+    transform: scale(1.2) rotate(20deg);
+
 }
 
 .fact-image img {
@@ -289,10 +301,8 @@ header {
     Sponsor Section Styles
 -----------------------------*/
 .sponsor-container {
-    margin-left: 240px;
-    margin-right: 240px;
-    margin-top: 180px;
-    margin-bottom: 130px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 .sponsor-info {
@@ -313,9 +323,15 @@ header {
 
 .sponsor-images {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     mix-blend-mode: luminosity;
     background-color: white;
+    margin-top: 50px;
+}
+
+.sponsor-img {
+    margin: 20px;
 }
 
 .sponsor-images img {
@@ -327,12 +343,18 @@ header {
 ----------------------------*/
 .bonus-container {
     display: flex;
-    margin:100px 240px;
     gap: 50px;
+    margin-bottom: 100px;
+    border: 2px solid gray;
+    padding: 50px;
+    border-radius: 6px;
 }
-.bonus-info{
+
+.bonus-info,
+.bonus-image {
     width: 50%;
 }
+
 .bonus-title {
     font-weight: 700;
     font-size: 45px;
@@ -343,19 +365,36 @@ header {
 .bonus-description {
     color: #727272;
     margin-bottom: 50px;
-    
+
 }
-.bonus-container h2{
-    margin-bottom: 50px;
+
+.bonus-image img {
+    width: 100%;
 }
-.bonus-image{
+
+.bonus-container h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+
+}
+
+.service li {
+    list-style: none;
+}
+
+.skills {
+    color: chartreuse;
+}
+
+.bonus-image {
     width: 50%;
 }
+
 /*--------------------
     footer styles
 ---------------------*/
 footer {
-    margin: 0px 240px 216px;
+
     background: #FFF4E7;
     border-radius: 8px;
     text-align: center;
@@ -371,4 +410,103 @@ footer {
     font-size: 20px;
     color: #424242;
     text-align: center;
+    padding: 20px;
+}
+
+/*--------------------------
+Responsive Styles
+-------------------------- */
+
+/* for mobile devices */
+@media screen and (max-width:576px) {
+    .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .brand-name {
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 100px;
+    }
+
+    .banner-info {
+        text-align: justify;
+    }
+
+    .banner-title {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .team-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .team-images {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .btn-large {
+        height: 200px;
+        position: initial;
+        width: 100%;
+    }
+
+    .feature-info,
+    .feature-image {
+        width: 100%;
+    }
+
+    .btn-large span {
+        font-weight: 700;
+        font-size: 35px;
+        padding: 15px;
+    }
+
+    .facts {
+        justify-content: center;
+    }
+
+    .fact-about-title {
+        margin-top: 20px;
+    }
+
+    .fact-about-description {
+        width: 100%;
+    }
+
+    .bonus-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .bonus-info,
+    .bonus-image {
+        width: 100%;
+    }
+
+    .hide {
+        display: none;
+    }
+
+
 }
