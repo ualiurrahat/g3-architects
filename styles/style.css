@@ -322,6 +322,35 @@ header {
     mix-blend-mode: luminosity;
 }
 
+/* --------------------------
+    bonsu section styles
+----------------------------*/
+.bonus-container {
+    display: flex;
+    margin:100px 240px;
+    gap: 50px;
+}
+.bonus-info{
+    width: 50%;
+}
+.bonus-title {
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
+    margin-bottom: 24px;
+}
+
+.bonus-description {
+    color: #727272;
+    margin-bottom: 50px;
+    
+}
+.bonus-container h2{
+    margin-bottom: 50px;
+}
+.bonus-image{
+    width: 50%;
+}
 /*--------------------
     footer styles
 ---------------------*/
