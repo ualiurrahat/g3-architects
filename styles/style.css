@@ -255,6 +255,7 @@ header {
 .facts {
     display: flex;
     gap: 125px;
+    margin-left: 50px;
 }
 
 .fact {
@@ -282,4 +283,63 @@ header {
     color: #727272;
     font-weight: 600;
     font-size: 20px;
+}
+
+/*---------------------------
+    Sponsor Section Styles
+-----------------------------*/
+.sponsor-container {
+    margin-left: 240px;
+    margin-right: 240px;
+    margin-top: 180px;
+    margin-bottom: 130px;
+}
+
+.sponsor-info {
+    text-align: center;
+}
+
+.sponsor-title {
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
+    margin-bottom: 24px;
+}
+
+.sponsor-description {
+    color: #727272;
+    margin-bottom: 50px;
+}
+
+.sponsor-images {
+    display: flex;
+    justify-content: space-around;
+    mix-blend-mode: luminosity;
+    background-color: white;
+}
+
+.sponsor-images img {
+    mix-blend-mode: luminosity;
+}
+
+/*--------------------
+    footer styles
+---------------------*/
+footer {
+    margin: 0px 240px 216px;
+    background: #FFF4E7;
+    border-radius: 8px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-title {
+    font-weight: 400;
+    font-size: 20px;
+    color: #424242;
+    text-align: center;
 }
