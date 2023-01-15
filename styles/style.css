@@ -23,15 +23,14 @@
     border: none;
 }
 
-
-/*---------------------------
-    header section styles
------------------------------*/
 header {
     background: rgba(255, 144, 14, 0.1);
 }
 
-/* brand name and navigation part  */
+
+/*---------------------------
+    header section styles
+-----------------------------*/
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -112,12 +111,13 @@ header {
     team section styles
  -------------------------  */
 .team-container {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 73px;
 
 }
+
 .team-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -131,9 +131,11 @@ header {
     height: 342px;
     border-radius: 8px;
 }
-.team-info{
+
+.team-info {
     margin-right: 300px;
 }
+
 .team-title {
     font-weight: 500;
     font-size: 45px;
@@ -160,8 +162,124 @@ header {
     margin-bottom: 32px;
 }
 
-
 .team-btn {
-    height: 64px;
+    height: 70px;
     text-align: left;
+}
+
+/* feature-section styles */
+.feature-container {
+    display: flex;
+    margin-left: 240px;
+    margin-top: 130px;
+    gap: 54px;
+
+
+}
+
+.feature-info {
+    width: 50%;
+}
+
+.feature-about-title {
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
+    margin-bottom: 24px;
+}
+
+.feature-about-description {
+    color: #727272;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.feature {
+    padding: 30px 42px 0 30px;
+}
+
+.feature-title {
+    color: #131313;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.feature-description {
+    color: #727272;
+    margin-top: 10px;
+}
+
+.feature-image {
+    margin-right: 240px;
+    width: 50%
+}
+
+.btn-large {
+    height: 200px;
+    position: relative;
+    bottom: 150px;
+    right: 70px;
+}
+
+.btn-large span {
+    font-weight: 700;
+    font-size: 65px;
+    padding: 25px;
+}
+
+/*--------------------------
+    facts section styles
+----------------------- */
+.fact-container {
+    margin-left: 240px;
+    margin-right: 240px;
+}
+
+.fact-about-title {
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
+    margin-bottom: 24px;
+}
+
+.fact-about-description {
+    color: #727272;
+    width: 50%;
+}
+
+.facts {
+    display: flex;
+    gap: 125px;
+}
+
+.fact {
+    margin-top: 100px;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    padding: 45px 36px 60px 35px;
+    text-align: center;
+}
+
+.fact-image img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.fact-number {
+    font-weight: 600;
+    font-size: 45px;
+    color: #424242;
+    margin-bottom: 5px;
+}
+
+.fact-title {
+    color: #727272;
+    font-weight: 600;
+    font-size: 20px;
 }
